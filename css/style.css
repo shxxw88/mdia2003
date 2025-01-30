@@ -32,7 +32,53 @@ fieldset {
 }
 
 
+/* Already mobile first!!!!*/
 
+/* Sharleen's section */
+
+/* blog */
+.blog-title {
+  text-align:center;
+}
+
+.blog-caption {
+  text-align: center;
+}
+
+.blog-entry {
+  display: grid;
+  grid-template-columns: 1fr; /* single column for mobile */
+  gap: 15px;
+  padding: 15px;
+}
+
+.blog-image{
+  width: 100%;
+}
+
+/* gallery*/
+
+.gallery-title .gallery-caption {
+  text-align: center;
+}
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 10px;
+  padding: 15px;
+}
+
+.gallery-image{
+  width: 100%;
+}
+
+/* clients */
+.clients-logos{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*3 columns*/
+  gap: 10px;
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -41,10 +87,9 @@ fieldset {
    ========================================================================== */
 
 
-
 /* tablet */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
-
+  
 }
 
 /* desktop */
