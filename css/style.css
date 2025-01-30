@@ -93,12 +93,12 @@ fieldset {
     grid-template-columns: 1fr 1fr; /* 2 columns */
     grid-template-rows: auto;
     grid-template-areas: 
-      "blog blog"
+      "blog1 blog1"
       "blog2 blog3"
   }
 
   .blog-item:first-child{
-    grid-area: blog;
+    grid-area: blog1;
   }
 
   .blog-item:nth-child(2){
