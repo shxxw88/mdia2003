@@ -132,6 +132,8 @@ fieldset {
   grid-template-rows: 1fr;
   grid-template-areas: 
     "blog1 blog2 blog3";
+  margin: 10px 150px 10px 150px;
+  width:auto;
 }
 
 .blog-entry:first-child {
@@ -144,6 +146,11 @@ fieldset {
   grid-area: "blog3";
 }
 
+.gallery-grid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 10px 150px 10px 150px;
+}
 
 }
 
