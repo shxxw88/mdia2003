@@ -81,7 +81,7 @@ fieldset {
 .blog-entry {
   display: grid;
   grid-template-columns: 1fr; /* single column for mobile */
-  gap: 15px;
+  gap: 16px;
   padding: 15px;
 }
 
@@ -91,14 +91,18 @@ fieldset {
 
 /* gallery*/
 
-.gallery-title .gallery-caption {
+.gallery-title{
+  text-align: center;
+} 
+
+.gallery-caption {
   text-align: center;
 }
 
 .gallery-grid{
   display: grid;
   grid-template-columns: 1fr; /* Single column for mobile */
-  gap: 10px;
+  gap: 16px;
   padding: 15px;
 }
 
@@ -110,8 +114,17 @@ fieldset {
 .clients-logos{
   display: grid;
   grid-template-columns: repeat(3, 1fr); /*3 columns*/
-  gap: 10px;
+  gap: 16px;
 }
+
+.clients-title {
+  text-align: center
+}
+
+.clients-caption {
+  text-align: center;
+}
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -121,24 +134,21 @@ fieldset {
 
 
 /* tablet */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+@media screen and (min-width: 632px){
   .blog-entry {
     grid-template-columns: 1fr 1fr; /* 2 columns */
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
       "blog1 blog1"
       "blog2 blog3";
-    width: 100%;
+    width: auto;
   }
-
   .blog-item:first-child{
     grid-area: blog1;
   }
-
   .blog-item:nth-child(2){
     grid-area: blog2;
   }
-
   .blog-item:nth-child(3){
     grid-area: blog3;
   }
@@ -154,8 +164,38 @@ fieldset {
 }
 
 /* desktop */
-@media only screen and (min-width: 1025px) and (max-width: 1280px){
+@media screen and (min-width: 1440px){
 
+.blog-entry{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "blog1 blog2 blog3";
+  margin: 10px 150px 10px 150px;
+  width:auto;
+}
+.blog-entry:first-child {
+  grid-area: "blog1";
+}
+.blog-entry:nth-child(2){
+  grid-area: "blog2";
+}
+.blog-entry:nth-child(3){
+  grid-area: "blog3";
+}
+
+.gallery-grid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 10px 150px 10px 150px;
+}
+
+.clients-logos{
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  margin: 10px 150px 10px 150px;
+}
 }
 
 
