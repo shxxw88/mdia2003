@@ -69,7 +69,7 @@ fieldset {
 .gallery-grid{
   display: grid;
   grid-template-columns: 1fr; /* Single column for mobile */
-  gap: 10px;
+  gap: 16px;
   padding: 15px;
 }
 
@@ -81,8 +81,17 @@ fieldset {
 .clients-logos{
   display: grid;
   grid-template-columns: repeat(3, 1fr); /*3 columns*/
-  gap: 10px;
+  gap: 16px;
 }
+
+.clients-title {
+  text-align: center
+}
+
+.clients-caption {
+  text-align: center;
+}
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -99,17 +108,14 @@ fieldset {
     grid-template-areas: 
       "blog1 blog1"
       "blog2 blog3";
-    width: 100%;
+    width: auto;
   }
-
   .blog-item:first-child{
     grid-area: blog1;
   }
-
   .blog-item:nth-child(2){
     grid-area: blog2;
   }
-
   .blog-item:nth-child(3){
     grid-area: blog3;
   }
@@ -135,7 +141,6 @@ fieldset {
   margin: 10px 150px 10px 150px;
   width:auto;
 }
-
 .blog-entry:first-child {
   grid-area: "blog1";
 }
@@ -152,6 +157,12 @@ fieldset {
   margin: 10px 150px 10px 150px;
 }
 
+.clients-logos{
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  margin: 10px 150px 10px 150px;
+}
 }
 
 
