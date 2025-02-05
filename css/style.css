@@ -1,39 +1,13 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+
   font-family: 'ubuntu', serif;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
 
 /*
  * A better looking default horizontal rule
@@ -46,22 +20,10 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
+  font-family: "Ubuntu", serif;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
 
 /*
  * Remove default fieldset styles.
@@ -73,177 +35,132 @@ fieldset {
   padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
 
-textarea {
-  resize: vertical;
+/* Already mobile first!!!!*/
+
+/* Sharleen's section */
+
+/* blog */
+.blog-title {
+  text-align:center;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+.blog-caption {
+  text-align: center;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+.blog-entry {
+  display: grid;
+  grid-template-columns: 1fr; /* single column for mobile */
+  gap: 16px;
+  padding: 15px;
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+.blog-image{
+  width: 100%;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
+/* gallery*/
 
-.invisible {
-  visibility: hidden;
+.gallery-title{
+  text-align: center;
+} 
+
+.gallery-caption {
+  text-align: center;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
+.gallery-grid{
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 16px;
+  padding: 15px;
 }
 
-.clearfix::after {
-  clear: both;
+.gallery-image{
+  width: 100%;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* clients */
+.clients-logos{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*3 columns*/
+  gap: 16px;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+.clients-title {
+  text-align: center
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.clients-caption {
+  text-align: center;
+}
 
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+
+/* tablet */
+@media screen and (min-width: 632px){
+  .blog-entry {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+      "blog1 blog1"
+      "blog2 blog3";
+    width: auto;
+  }
+  .blog-item:first-child{
+    grid-area: blog1;
+  }
+  .blog-item:nth-child(2){
+    grid-area: blog2;
+  }
+  .blog-item:nth-child(3){
+    grid-area: blog3;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); 
   }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
+  .clients-logos {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
   }
 }
+
+/* desktop */
+@media screen and (min-width: 1440px){
+
+.blog-entry{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "blog1 blog2 blog3";
+  margin: 10px 150px 10px 150px;
+  width:auto;
+}
+.blog-entry:first-child {
+  grid-area: "blog1";
+}
+.blog-entry:nth-child(2){
+  grid-area: "blog2";
+}
+.blog-entry:nth-child(3){
+  grid-area: "blog3";
+}
+
+.gallery-grid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 10px 150px 10px 150px;
+}
+
+.clients-logos{
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  margin: 10px 150px 10px 150px;
+}
+}
+
 
 
