@@ -7,22 +7,7 @@ html {
   font-family: 'ubuntu', serif;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
 
 /*
  * A better looking default horizontal rule
@@ -35,24 +20,10 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
-=======
   font-family: "Ubuntu", serif;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
 
 /*
  * Remove default fieldset styles.
@@ -70,21 +41,33 @@ fieldset {
 /* Sharleen's section */
 
 /* blog */
+
 .blog-title {
   text-align:center;
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: 48px;
+  margin-bottom: 0;
 }
 
 .blog-caption {
   text-align: center;
+  font-size: 11px;
+  color: rgba(163, 163, 163, 1);
+  font-weight: 400;
+  margin: 0;
 }
 
 .blog-entry {
   display: grid;
   grid-template-columns: 1fr; /* single column for mobile */
-  gap: 16px;
-  padding: 15px;
+  grid-gap: 16px;
+  padding: 28px 16px 0 16px;
 }
 
+.blog-item{
+margin-bottom: 0;
+}
 .blog-image{
   width: 100%;
 }
@@ -93,17 +76,25 @@ fieldset {
 
 .gallery-title{
   text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: 48px;
+  margin-bottom: 0;
 } 
 
 .gallery-caption {
   text-align: center;
+  font-size: 11px;
+  color: rgba(163, 163, 163, 1);
+  font-weight: 400;
+  margin: 0;
 }
 
 .gallery-grid{
   display: grid;
   grid-template-columns: 1fr; /* Single column for mobile */
-  gap: 16px;
-  padding: 15px;
+  grid-gap: 16px;
+  padding: 28px 16px 0 16px;
 }
 
 .gallery-image{
@@ -111,26 +102,32 @@ fieldset {
 }
 
 /* clients */
+.clients{
+  display: none;
+}
+
 .clients-logos{
   display: grid;
   grid-template-columns: repeat(3, 1fr); /*3 columns*/
-  gap: 16px;
+  grid-gap: 16px;
+  padding: 28px 16px 0 16px;
+  align-items: center;
 }
 
 .clients-title {
-  text-align: center
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: 48px;
 }
 
 .clients-caption {
   text-align: center;
+  font-size: 11px;
+  color: rgba(163, 163, 163, 1);
+  font-weight: 400;
+  margin: 0;
 }
-
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
 
 /* tablet */
@@ -152,15 +149,18 @@ fieldset {
   .blog-item:nth-child(3){
     grid-area: blog3;
   }
-
-
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .clients{
+    display: block;
   }
 
   .clients-logos {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
   }
+
 }
 
 /* desktop */
