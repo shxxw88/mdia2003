@@ -141,8 +141,13 @@ fieldset {
   padding: 28px 16px 0 16px;
 }
 
-.gallery-image{
+.gallery-image, .gallery-image-container{
   width: 100%;
+  height: auto;
+}
+
+.gallery-image-overlay{
+  position: relative;
 }
 
 /* clients */
