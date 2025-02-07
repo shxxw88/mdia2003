@@ -12,7 +12,8 @@ html, body {
 .page-home-intro {
     font-weight: 400;
     font-size: 34px;
-    padding: 0 36px 0 36px;;
+    padding: 0 36px 0 36px;
+
 }
 
 .blue {
@@ -81,10 +82,60 @@ html, body {
     .nav-tabs, .banner-row{
         display: block;
     }
+    .banner-row {
+        background-color: rgba(235, 235, 235, 1);
+        padding-right: 16px;
+        padding-left: 16px;  
+    }
+    .banner {
+        position: relative;
+    margin-bottom: 40px;
+    }
     .banner img {
         width: 100%;
-        margin-bottom: 40px;
+        height: 100%;
+        display: block;
     }
+    .text-box {
+        position: absolute;
+        left: 10px;
+        padding: 15px 20px;
+        background: white;
+        font-size: 18px;
+        font-weight: 500;
+        transition: ease-in-out 0.4s;
+    }
+    .text-box::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 0;
+        width: 10px;
+        height: 100%;
+     }
+    .text1 { 
+        top: 267px; 
+        left: 40px; 
+     }
+    .text2 { 
+        top: 328px;
+        left: 40px; 
+     }
+    .text3 { 
+        top: 389px;
+        left: 40px; 
+     }
+     
+     .text1::before { 
+        background-color: #186AA2; 
+    } 
+     .text2::before { 
+        background-color: #DE6262; 
+    } 
+     .text3::before { 
+        background-color: #FFB901; 
+    } 
+
     nav {
         display: flex;
         flex-direction: column;
@@ -138,9 +189,13 @@ html, body {
         color: rgba(0, 87, 194, 1);
     }
     
-    .arrow {
+    .nav-buttons:hover .arrow {
         font-weight: 300;
+        margin: 5px;
+        font-size: 18px;
+        color: rgba(240, 240, 140, 1);
     }
+    
     .websolutions {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -155,7 +210,7 @@ html, body {
 }
 
 @media screen and (min-width: 1440px){
-   body {
+   .header-content, nav {
     margin: 0 10% 0 10%;
    }
     nav {
@@ -175,8 +230,55 @@ html, body {
     .nav-tabs li {
         height: 96px;
     }
+    .banner-row {
+        background-color: rgba(235, 235, 235, 1);
+        padding: 0 10% 0 10%;
+    }
+    .banner {
+    margin-bottom: 60px;
+    }
+    .banner img {
+        width: 100%;
+    
+    }
+    .text-box {
+        position: absolute;
+        left: 10px;
+        padding: 20px 30px;
+        background: white;
+        font-size: 30px;
+        font-weight: 500;
+        transition: ease-in-out 0.1s;
+
+    }
+    .text-box::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 0;
+        width: 10px;
+        height: 100%;
+     }
+    .text1 { 
+        top: 380px; 
+        left: 230px; 
+     }
+    .text2 { 
+        top: 470px;
+        left: 230px; 
+     }
+    .text3 { 
+        top: 560px;
+        left: 230px; 
+     }
+    
     .websolutions {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
+    }
+    .websolutions-title {
+        font-size: 28px;
+        font-weight: 400;
+        margin-top: 70px;
     }
 }
