@@ -103,6 +103,7 @@ html, body {
         background: white;
         font-size: 18px;
         font-weight: 500;
+        transition: ease-in-out 0.4s;
     }
     .text-box::before {
         content: "";
@@ -188,11 +189,13 @@ html, body {
         color: rgba(0, 87, 194, 1);
     }
     
-    .arrow {
+    .nav-buttons:hover .arrow {
         font-weight: 300;
         margin: 5px;
         font-size: 18px;
+        color: rgba(240, 240, 140, 1);
     }
+    
     .websolutions {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -245,6 +248,8 @@ html, body {
         background: white;
         font-size: 30px;
         font-weight: 500;
+        transition: ease-in-out 0.1s;
+
     }
     .text-box::before {
         content: "";
