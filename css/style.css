@@ -97,6 +97,7 @@ fieldset {
   bottom: 0;
   background-color: #19B2DE;
   width: 100%;
+  padding-top: 5px;
   padding-bottom: 5px;
 }
 .blog-item-caption-header{
@@ -162,11 +163,33 @@ fieldset {
   transition: 0.8 ease-in;
 }
 
-.gallery-image-container:hover .gallery-image-overlay{
-  opacity: 83%; 
+
+
+.gallery-image-bar{
+  display: block;
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  background-color: #19B2DE;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-.gallery-image-container:active .gallery-image-overlay{
-  opacity: 83%;
+.gallery-image-bar-header{
+  padding-left: 15px;
+}
+.gallery-image-bar-subheader{
+  font-size: 11px;
+  padding-left: 15px;
+}
+.gallery-image-bar-square{
+  height: 25px;
+  width: 25px;
+  background-color: #1596BD;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
 }
 
 .overlay-caption-container{
@@ -252,6 +275,7 @@ fieldset {
     grid-template-columns: repeat(2, 1fr); 
   }
   
+  
   .clients{
     display: block;
   }
@@ -281,6 +305,13 @@ fieldset {
 }
 .blog-entry:nth-child(3){
   grid-area: "blog3";
+}
+
+.gallery-image-bar{
+  display: none;
+}
+.gallery-image-container:hover .gallery-image-overlay{
+  opacity: 83%; 
 }
 
 .gallery-grid{
