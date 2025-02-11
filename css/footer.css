@@ -1,16 +1,32 @@
 .site-footer {
   background-color: #0d2842;
   color: #ffffff;
-  padding: 40px 0;
+  padding: 40px 10%; /* Added padding for spacing */
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
 }
 
 .profile {
-  text-align: center;
+  display: flex;
+  align-items: center; /* Vertically align items */
+  text-align: left;
   width: 100%;
-  position: relative;
+  margin-bottom: 20px;
+  position: relative; /* Required for z-index to work */
   z-index: 10;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px; /* Space between the image and description */
+}
+
+.profile-description {
+  flex: 1; /* Make the description take the remaining space */
+  max-width: 600px; /* Optional: limit the width of the description */
 }
 
 .footer-container {
@@ -23,26 +39,27 @@
   z-index: 1;
 }
 
-.profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
+/* Section specific widths for desktop view */
+.about-us {
+  width: 232px; /* About Us section width */
 }
 
-.profile-description {
-  text-align: left;
-  max-width: 600px;
-  margin: 20px auto;
+.instagram {
+  width: 232px; /* Instagram section width */
 }
 
+.mastodon {
+  width: 320px; /* Mastodon section width */
+}
+
+.track-us {
+  flex: 1; /* Track Us section takes remaining space */
+}
+
+/* General section layout */
 .footer-container > section {
-  flex: 1 1 250px; /* Allow the sections to shrink and grow */
   margin: 20px;
 }
-
 
 h3 {
   font-size: 1.5rem;
@@ -83,6 +100,7 @@ h3 {
 .square {
   width: 30px;
   height: 30px;
+  border-radius: 3px;
 }
 
 .blue {
@@ -105,14 +123,21 @@ h3 {
   background-color: #FFB901;
 }
 
+.social-icons {
+  margin-bottom: 20px; /* Add space between the colored squares and the email input */
+}
+
+
 .email-form {
   display: flex;
   align-items: center;
   gap: 0;
+  margin-top: 20px;
+  max-width: 200px;
 }
 
 .email-form input {
-  padding: 12px;
+  padding: 0px;
   flex: 1;
   border: none;
   border-radius: 5px 0 0 5px;
@@ -140,6 +165,45 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+/* Tablet View (632px to 834px) */
+@media (max-width: 834px) {
+  .site-footer {
+    padding: 40px 8%;
+  }
+}
+
+/* Mobile View (432px to 754px) */
+@media (max-width: 754px) {
+  .site-footer {
+    padding: 20px 5%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container > section {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .profile {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile View (432px to 754px) */
+@media (max-width: 754px) {
+  .about-us, .instagram {
+    display: none; /* Hide these sections on mobile */
+  }
+}
+
+.highlight {
+  color: #1BADE6; /* Blue color */
 }
 
 
