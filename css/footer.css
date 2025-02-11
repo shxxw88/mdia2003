@@ -1,69 +1,141 @@
-/* General Footer Styling */
 .site-footer {
-  background-color: #0E2E4E;
-  color: white;
-  padding: 40px 20px;
+  background-color: #0d2842;
+  color: #ffffff;
+  padding: 40px 0;
   font-family: 'Ubuntu', sans-serif;
-}
-
-.footer-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Title Colors */
-.about-us-title { color: #FFB901; }
-.instagram-title { color: #DE6262; }
-.mastodon-title { color: #19B2DE; }
-.track-us-title { color: #FFFFFF; }
-
-/* Title Decorations */
-.title-decoration {
-  height: 4px;
   width: 100%;
-  margin-bottom: 15px;
-  position: relative;
 }
-.title-decoration::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -5px;
-  transform: translateX(-50%);
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid;
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
 }
-.about-us-color::after { border-top-color: #FFB901; }
-.instagram-color::after { border-top-color: #DE6262; }
-.mastodon-color::after { border-top-color: #19B2DE; }
-.track-us-color::after { border-top-color: #FFFFFF; }
 
-/* Track Us Colored Squares */
-.color-1 { background-color: #527CC4; }
-.color-2 { background-color: #E46145; }
-.color-3 { background-color: #00B0E2; }
-.color-4 { background-color: #F6679C; }
-.color-5 { background-color: #FFB901; }
+.profile {
+  text-align: center;
+  width: 100%;
+}
 
-/* Email Form */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-description {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.footer-container > section {
+  flex: 1 1 250px; /* Allow the sections to shrink and grow */
+  margin: 20px;
+}
+
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.about-us h3 {
+  color: #FFB901;
+}
+
+.instagram h3 {
+  color: #DE6262;
+}
+
+.mastodon h3 {
+  color: #19B2DE;
+}
+
+.track-us h3 {
+  color: #ffffff;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.instagram-grid img:nth-child(9) {
+  visibility: hidden;
+}
+
+.color-squares {
+  display: flex;
+  gap: 5px;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+}
+
+.blue {
+  background-color: #527CC4;
+}
+
+.red {
+  background-color: #E46145;
+}
+
+.lightblue {
+  background-color: #00B0E2;
+}
+
+.pink {
+  background-color: #F6679C;
+}
+
+.yellow {
+  background-color: #FFB901;
+}
+
 .email-form {
   display: flex;
   align-items: center;
+  gap: 0;
 }
+
 .email-form input {
+  padding: 12px;
+  flex: 1;
+  border: none;
+  border-radius: 5px 0 0 5px;
   background-color: #DE6262;
   color: white;
-  padding: 10px;
-  border-radius: 5px;
+  height: 40px;
 }
-.send-button {
+
+.email-form button {
   background-color: #FFB901;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
-.send-icon {
+
+.email-form button img {
   width: 20px;
-  height: 20px;
 }
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
