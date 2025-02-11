@@ -1,0 +1,209 @@
+.site-footer {
+  background-color: #0d2842;
+  color: #ffffff;
+  padding: 40px 10%; /* Added padding for spacing */
+  font-family: 'Ubuntu', sans-serif;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative; /* Required for z-index to work */
+  z-index: 10;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px; /* Space between the image and description */
+}
+
+.profile-description {
+  flex: 1; /* Make the description take the remaining space */
+  max-width: 600px; /* Optional: limit the width of the description */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section specific widths for desktop view */
+.about-us {
+  width: 232px; /* About Us section width */
+}
+
+.instagram { 
+  width: 232px; /* Instagram section width */
+}
+
+.mastodon {
+  width: 320px; /* Mastodon section width */
+}
+
+.track-us {
+  flex: 1; /* Track Us section takes remaining space */
+}
+
+/* General section layout */
+.footer-container > section {
+  margin: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.about-us h3 {
+  color: #FFB901;
+}
+
+.instagram h3 {
+  color: #DE6262;
+}
+
+.mastodon h3 {
+  color: #19B2DE;
+}
+
+.track-us h3 {
+  color: #ffffff;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.instagram-grid img:nth-child(9) {
+  visibility: hidden;
+}
+
+.color-squares {
+  display: flex;
+  gap: 5px;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.blue {
+  background-color: #527CC4;
+}
+
+.red {
+  background-color: #E46145;
+}
+
+.lightblue {
+  background-color: #00B0E2;
+}
+
+.pink {
+  background-color: #F6679C;
+}
+
+.yellow {
+  background-color: #FFB901;
+}
+
+.social-icons {
+  margin-bottom: 20px; /* Add space between the colored squares and the email input */
+}
+
+
+.email-form {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 20px;
+  max-width: 200px;
+}
+
+.email-form input {
+  padding: 0px;
+  flex: 1;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #DE6262;
+  color: white;
+  height: 40px;
+}
+
+.email-form button {
+  background-color: #FFB901;
+  padding: 0 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.email-form button img {
+  width: 20px;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tablet View (632px to 834px) */
+@media (max-width: 834px) {
+  .site-footer {
+    padding: 40px 8%;
+  }
+}
+
+/* Mobile View (432px to 754px) */
+@media (max-width: 754px) {
+  .site-footer {
+    padding: 20px 5%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container > section {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .profile {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile View (432px to 754px) */
+@media (max-width: 754px) {
+  .about-us, .instagram {
+    display: none; /* Hide these sections on mobile */
+  }
+}
+
+.highlight {
+  color: #1BADE6; /* Blue color */
+}
+
+
